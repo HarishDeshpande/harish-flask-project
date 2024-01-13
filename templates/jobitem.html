@@ -1,0 +1,16 @@
+<div class="border-bottom row" style="margin-bottom: 16px; padding-bottom: 8px;">
+  <!-- bootstrap class has the 12 column layout and we can use -->
+  <!-- that layout by simply calling col-3 or col-6 or col-9 -->
+  <!-- a coulmn can be called only inside a row so -->
+  <!-- outer div is given class row and then we called column -->
+  <div class="col-10">
+    <h4 style="color: rgb(120,120,120,); margin-bottom: 4px;">{{job['title']}}</h4>
+    <div><b>Location: </b>{{job['location']}}</div>
+    {% if 'salary' in job %}
+    <div><b>Salary: </b>{{job['salary']}}</div>
+    {% endif %}
+  </div>
+  <div class="col-2">
+    <button type="button" class="btn btn-outline-primary">Apply</button>
+  </div>
+</div>
