@@ -13,14 +13,23 @@
   </style>
 </head>
 <body>
+  {% include 'nav.html' %}
+  <img class="img-fluid" id="banner" src="static/vidhansbha.jpg">
   <div class="container">
     <h1 class="text-center mt-2 mb-4">{{ company_name }} Data</h1>
-    <img class="img-fluid" id="banner" src="https://545720d2-14a5-4ce3-b624-779061833fb8-00-304mivptvupl4.janeway.replit.dev/static/vidhansbha.jpg">
-    <h2 class="text-center">About Maharashtra Vidhan Sabha</h2>
-    <p class='lead'>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam efficitur lectus ac purus ullamcorper, eget accumsan justo lobortis. Vivamus ut ipsum aliquam, fermentum turpis eu, faucibus ex. Vivamus in sapien nec quam vehicula cursus. <br>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam efficitur lectus ac purus ullamcorper, eget accumsan justo lobortis. Vivamus ut ipsum aliquam, fermentum turpis eu, faucibus ex. Vivamus in sapien nec quam vehicula cursus.
-    </p>
+    <!-- <img class="img-fluid" id="banner" src="static/vidhansbha.jpg"> -->
+    <!-- <h2 class="text-center">About Maharashtra Vidhan Sabha</h2> -->
+    <div class='row'>
+      <div class='col-md-6' style='margin-bottom: 16px;'>
+        <p class='lead'>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam efficitur lectus ac purus ullamcorper, eget accumsan justo lobortis. Vivamus ut ipsum aliquam, fermentum turpis eu, faucibus ex. Vivamus in sapien nec quam vehicula cursus. <br>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam efficitur lectus ac purus ullamcorper, eget accumsan justo lobortis. Vivamus ut ipsum aliquam, fermentum turpis eu, faucibus ex. Vivamus in sapien nec quam vehicula cursus.
+        </p>
+      </div>
+      <div class='d-none d-md-block col-md-6'>
+        <img src="static/assembly_session_image.jpg" style="height: 320px; border-radius: 4px;">
+      </div>
+    </div>
     <h2 class="text-center mt-2 mb-4">Job Opening</h2>
     <p >
       {% for job in jobs %}
@@ -29,9 +38,10 @@
     
     </p>
     <div class="text-center">
-      <button class="btn btn-primary btn-lg">Contact Us</button>
+      <a href="mailto:harishdeshpande780@gmail.com?subject=Question about job opening!" class="btn btn-primary btn-lg">Contact Us</a>
       <p class="mt-4">copyright harish, 2024</p>
     </div>
   </div>
+  {% include 'footer.html' %}
 </body>
 </html>
